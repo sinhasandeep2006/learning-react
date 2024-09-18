@@ -1,7 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit'
+import todoReducer from '../features/todo/todoslice'
 
-
-export const store = configureStore({})
+export const store = configureStore({
+    reducer:todoReducer
+})
 
 //           work on the Redux Toolkit
 //
@@ -9,7 +11,7 @@ export const store = configureStore({})
 // step 2 : in app make a File store.js that conatine the code
 //         import {configureStore} from '@reduxjs/toolkit'
 //
-//
+// give the know of the reduces to the store
 // //         export const store = configureStore({})
 //
 // step 3 : make a folder reducers or slices both are same
@@ -31,4 +33,8 @@ export const store = configureStore({})
 //
     // State give the all the present data in the store
 //}
-// })
+// export  const { addTodo,removeTodo,updateTodo,delteTodo}=todoSlice.actions
+
+// export default todoSlice.reducer
+// // })
+
